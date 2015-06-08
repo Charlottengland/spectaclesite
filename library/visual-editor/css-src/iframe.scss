@@ -1,0 +1,128 @@
+@import 'mixins',
+'loading',
+'tooltips';
+
+/* General */
+body { 
+	float: left;
+	width: 100%; 
+}
+
+* {
+	user-select: none !important;
+	-webkit-user-select: none !important;
+}
+
+	
+/* Blocks */
+.block {
+	position: relative;
+}
+
+/* Design Editor */
+body:not(.inspector-disabled) .inspector-element-hover {
+	outline: 1px solid #0ea8c7 !important;
+	outline-offset: -1px;
+}
+
+body:not(.inspector-disabled) .inspector-element-selected {
+	outline: 1px solid #ee7248 !important;
+	outline-offset: -1px;
+}
+
+
+/* No Edit Notice */
+div#no-edit-notice {
+	background: rgba(0, 0, 0, 0.7);
+    display: block;
+    height: 100%;
+    position: fixed;
+    width: 105%;
+    z-index: 15000;
+	left: -50px;
+	font-family: helvetica, sans-serif;
+}
+
+	div#no-edit-notice div {
+		background: rgba(0, 0, 0, 0.5);
+	    @include rounded-corners(15px);
+	    min-height: 20px;
+	    left: 50%;
+	    margin-left: -300px;
+	    padding: 30px;
+	    position: fixed;
+	    text-align: center;
+	    top: 150px;
+	    width: 600px;
+	}
+
+		div#no-edit-notice h1 {
+			color: rgba(255, 255, 255, 0.75);
+			font-size: 18px;
+			line-height: 24px;
+		}
+
+		div#no-edit-notice h2 {
+			margin: 10px 0 0;
+			color: #6a6a6a;
+		}
+
+
+/* jQuery UI Staples */
+.ui-resizable {
+	position: relative; }
+	
+.ui-resizable-handle {
+	display: block;
+	font-size: 0.1px;
+	position: absolute;
+	z-index: 10; }
+	
+.ui-resizable-n {
+	cursor: ns-resize;
+	height: 15px;
+	left: 0;
+	top: -5px;
+	width: 100%; }
+	
+.ui-resizable-s {
+	bottom: -5px;
+	cursor: ns-resize;
+	height: 15px;
+	left: 0;
+	width: 98%; }
+	
+.ui-resizable-e {
+	cursor: ew-resize;
+	height: 98%;
+	right: -5px;
+	top: 0;
+	width: 15px; }
+	
+.ui-resizable-w {
+	cursor: ew-resize;
+	height: 100%;
+	left: -5px;
+	top: 0;
+	width: 15px; }
+	
+.ui-resizable-se {
+	bottom: -5px;
+	cursor: se-resize;
+	height: 15px;
+	right: -5px;
+	width: 15px; }
+
+.ui-resizable-sw {
+	bottom: -5px;
+	cursor: sw-resize;
+	height: 15px;
+	left: -5px;
+	width: 15px; }
+
+.ui-resizable-nw {
+	top: -5px;
+	cursor: nw-resize;
+	height: 15px;
+	left: -5px;
+	width: 15px; }
